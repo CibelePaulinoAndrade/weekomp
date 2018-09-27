@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14113" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14113" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="iBf-Iz-ilU">
     <device id="watch42" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -16,10 +16,33 @@
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Details Interface Controller-->
         <scene sceneID="cP9-8M-Zb2">
             <objects>
-                <controller id="iBf-Iz-ilU"/>
+                <controller id="iBf-Iz-ilU" customClass="DetailsInterfaceController" customModule="weekomp_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="dG7-EC-jbM"/>
+                        <label alignment="left" text="Label" id="lff-gc-cSX">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <label alignment="left" text="Label" id="Yea-Jy-12n">
+                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                        </label>
+                        <label alignment="left" text="Label" id="ZYa-pw-7Db">
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                        </label>
+                        <label alignment="left" text="Label" id="RZ8-64-CtS">
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="categoriaIndicador" destination="dG7-EC-jbM" id="qxO-C8-lGU"/>
+                        <outlet property="data" destination="ZYa-pw-7Db" id="1dN-wi-ak7"/>
+                        <outlet property="local" destination="RZ8-64-CtS" id="ToT-Xd-llN"/>
+                        <outlet property="palestrante" destination="Yea-Jy-12n" id="ecx-ZP-43j"/>
+                        <outlet property="titulo" destination="lff-gc-cSX" id="9qc-2H-HQN"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="468" y="345"/>
         </scene>

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE8AC745215D210500306FFA /* EventoSalas.json in Resources */ = {isa = PBXBuildFile; fileRef = BE8AC744215D210500306FFA /* EventoSalas.json */; };
+		BE8AC746215D210500306FFA /* EventoSalas.json in Resources */ = {isa = PBXBuildFile; fileRef = BE8AC744215D210500306FFA /* EventoSalas.json */; };
+		BE8AC747215D210500306FFA /* EventoSalas.json in Resources */ = {isa = PBXBuildFile; fileRef = BE8AC744215D210500306FFA /* EventoSalas.json */; };
 		BEE2DEDA215D121C00F7EC9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE2DED9215D121C00F7EC9E /* AppDelegate.swift */; };
 		BEE2DEDC215D121D00F7EC9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE2DEDB215D121D00F7EC9E /* ViewController.swift */; };
 		BEE2DEDF215D121D00F7EC9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEE2DEDD215D121D00F7EC9E /* Main.storyboard */; };
@@ -22,10 +25,7 @@
 		BEE2DF05215D122000F7EC9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEE2DF04215D122000F7EC9E /* Assets.xcassets */; };
 		BEE2DF16215D148B00F7EC9E /* TalksInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE2DF15215D148B00F7EC9E /* TalksInterfaceController.swift */; };
 		BEE2DF18215D14A100F7EC9E /* DetailsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE2DF17215D14A100F7EC9E /* DetailsInterfaceController.swift */; };
-		BEE2DF1B215D16CD00F7EC9E /* EventoSalas.json in Resources */ = {isa = PBXBuildFile; fileRef = BEE2DF1A215D16CD00F7EC9E /* EventoSalas.json */; };
 		BEE2DF1D215D171900F7EC9E /* Evento.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE2DF1C215D171900F7EC9E /* Evento.swift */; };
-		BEE2DF1E215D172700F7EC9E /* EventoSalas.json in Resources */ = {isa = PBXBuildFile; fileRef = BEE2DF1A215D16CD00F7EC9E /* EventoSalas.json */; };
-		BEE2DF1F215D172700F7EC9E /* EventoSalas.json in Resources */ = {isa = PBXBuildFile; fileRef = BEE2DF1A215D16CD00F7EC9E /* EventoSalas.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +71,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BE8AC744215D210500306FFA /* EventoSalas.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = EventoSalas.json; sourceTree = "<group>"; };
 		BEE2DED6215D121C00F7EC9E /* weekomp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weekomp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEE2DED9215D121C00F7EC9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEE2DEDB215D121D00F7EC9E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -91,7 +92,6 @@
 		BEE2DF07215D122000F7EC9E /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		BEE2DF15215D148B00F7EC9E /* TalksInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalksInterfaceController.swift; sourceTree = "<group>"; };
 		BEE2DF17215D14A100F7EC9E /* DetailsInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsInterfaceController.swift; sourceTree = "<group>"; };
-		BEE2DF1A215D16CD00F7EC9E /* EventoSalas.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = EventoSalas.json; sourceTree = "<group>"; };
 		BEE2DF1C215D171900F7EC9E /* Evento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Evento.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -175,8 +175,8 @@
 		BEE2DF19215D164300F7EC9E /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				BEE2DF1A215D16CD00F7EC9E /* EventoSalas.json */,
 				BEE2DF1C215D171900F7EC9E /* Evento.swift */,
+				BE8AC744215D210500306FFA /* EventoSalas.json */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -284,7 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEE2DEE4215D121E00F7EC9E /* LaunchScreen.storyboard in Resources */,
-				BEE2DF1F215D172700F7EC9E /* EventoSalas.json in Resources */,
+				BE8AC745215D210500306FFA /* EventoSalas.json in Resources */,
 				BEE2DEE1215D121E00F7EC9E /* Assets.xcassets in Resources */,
 				BEE2DEDF215D121D00F7EC9E /* Main.storyboard in Resources */,
 			);
@@ -295,7 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEE2DEF1215D121F00F7EC9E /* Assets.xcassets in Resources */,
-				BEE2DF1E215D172700F7EC9E /* EventoSalas.json in Resources */,
+				BE8AC746215D210500306FFA /* EventoSalas.json in Resources */,
 				BEE2DEEF215D121E00F7EC9E /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,7 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEE2DF05215D122000F7EC9E /* Assets.xcassets in Resources */,
-				BEE2DF1B215D16CD00F7EC9E /* EventoSalas.json in Resources */,
+				BE8AC747215D210500306FFA /* EventoSalas.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
