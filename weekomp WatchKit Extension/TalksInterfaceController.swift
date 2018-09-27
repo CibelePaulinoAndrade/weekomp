@@ -11,11 +11,25 @@ import Foundation
 
 
 class TalksInterfaceController: WKInterfaceController {
-
+    
+    @IBOutlet var tableEventos: WKInterfaceTable!
+    var eventos = Evento.allEventos()
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        // Configure interface objects here.
+        tableEventos.setNumberOfRows(eventos.count, withRowType: "EventoRow")
+        for i in 0..<tableEventos.numberOfRows {
+            print(i)
+            guard let controller = tableEventos.rowController(at: i) as? EventosRowController else {continue}
+            controller.evento = eventos[i]
+        }
+    }
+    
+    override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
+        let evento = eventos[rowIndex]
+        print(evento.nome)
+        //presentController(withName: "Evento", context: evento)
     }
 
     override func willActivate() {
