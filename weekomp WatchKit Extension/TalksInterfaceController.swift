@@ -27,8 +27,7 @@ class TalksInterfaceController: WKInterfaceController {
     
     override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
         let evento = eventos[rowIndex]
-        print(evento.nome)
-        //presentController(withName: "Evento", context: evento)
+        presentController(withName: "Details", context: evento)
     }
 
     override func willActivate() {
