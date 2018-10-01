@@ -26,8 +26,6 @@ class DetailsInterfaceController: WKInterfaceController {
         // Configure interface objects here.
         let novoEvento = Evento.allEventos()[0]
         self.evento = novoEvento
-        
-        self.setCategoriaIndicador("passar enum categoria")
         self.setValores(novoEvento)
         
         addMenuItem(with: .accept, title: "Confirmar Presença", action: #selector(menuItemAction))
@@ -43,14 +41,15 @@ class DetailsInterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 
-    func setCategoriaIndicador (_ indicador: String){
+    func setCategoriaIndicador (){
         self.categoriaIndicador.setHeight(5)
         self.categoriaIndicador.setWidth(WKInterfaceDevice.current().screenBounds.size.width)
-        self.categoriaIndicador.setBackgroundColor(UIColor.white)
+        self.categoriaIndicador.setBackgroundColor(evento?.getColor())
         self.categoriaIndicador.setCornerRadius(0)
     }
     
     func setValores (_ evento: Evento) {
+        self.setCategoriaIndicador()
         self.titulo.setText(evento.nome)
         self.palestrante.setText(evento.palestrante)
         self.data.setText(evento.dia.replacingOccurrences(of: ".", with: "/") + " às " + evento.horario)
