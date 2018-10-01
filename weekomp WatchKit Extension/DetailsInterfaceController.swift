@@ -15,20 +15,22 @@ class DetailsInterfaceController: WKInterfaceController {
     @IBOutlet var categoriaLabel: WKInterfaceLabel!
     @IBOutlet var titulo: WKInterfaceLabel!
     @IBOutlet var palestrante: WKInterfaceLabel!
-    @IBOutlet var data: WKInterfaceLabel!
     @IBOutlet var local: WKInterfaceLabel!
     @IBOutlet var eventoDescriptionGroup: WKInterfaceGroup!
+    @IBOutlet var favoriteButtonGroup: WKInterfaceGroup!
+    @IBOutlet var favoriteButton: WKInterfaceButton!
     
     var evento: Evento?
-    var isPresencaConfirmada = false
+    var isFavorite = false
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         // Configure interface objects here.
         self.evento = context as? Evento
         self.setValores(evento!)
+        self.favoriteButtonGroup.setBackgroundColor(evento?.getColor())
         
-        addMenuItem(with: .accept, title: "Confirmar Presença", action: #selector(menuItemAction))
+        addMenuItem(with: .accept, title: "Favoritar", action: #selector(menuItemAction))
     }
 
     override func willActivate() {
@@ -43,7 +45,6 @@ class DetailsInterfaceController: WKInterfaceController {
 
     func setCategoriaIndicador (){
         self.categoriaIndicador.setHeight(18)
-        self.categoriaIndicador.setWidth(WKInterfaceDevice.current().screenBounds.size.width)
         self.categoriaIndicador.setBackgroundColor(evento?.getColor())
         self.categoriaIndicador.setCornerRadius(2)
     }
@@ -53,18 +54,33 @@ class DetailsInterfaceController: WKInterfaceController {
         self.categoriaLabel.setText(evento.sessao)
         self.titulo.setText(evento.nome)
         self.palestrante.setText(evento.palestrante)
-        self.data.setText(evento.dia.replacingOccurrences(of: ".", with: "/") + " às " + evento.horario)
-        self.local.setText(evento.local)
+        self.local.setText(evento.local + " às " + evento.horario)
+    }
+    
+    
+    @IBAction func favoriteButtonGroupTapped(_ sender: Any) {
+        print("tap")
+        self.handleFavorite()
+    }
+    
+    @IBAction func favoriteButtonAction() {
+        print("but")
+        self.handleFavorite()
     }
     
     @objc func menuItemAction() {
-        isPresencaConfirmada = !isPresencaConfirmada
-        if isPresencaConfirmada {
-            clearAllMenuItems()
-            addMenuItem(with: .decline, title: "Cancelar Presença", action: #selector(menuItemAction))
+        self.handleFavorite()
+    }
+    
+    private func handleFavorite() {
+        isFavorite = !isFavorite
+        clearAllMenuItems()
+        if isFavorite {
+            self.favoriteButton.setBackgroundImage(#imageLiteral(resourceName: "filled_star"))
+            addMenuItem(with: .decline, title: "Desfavoritar", action: #selector(menuItemAction))
         } else {
-            clearAllMenuItems()
-            addMenuItem(with: .accept, title: "Confirmar Presença", action: #selector(menuItemAction))
+            self.favoriteButton.setBackgroundImage(#imageLiteral(resourceName: "star"))
+            addMenuItem(with: .accept, title: "Favoritar", action: #selector(menuItemAction))
         }
     }
     

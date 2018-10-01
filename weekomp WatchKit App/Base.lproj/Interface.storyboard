@@ -88,17 +88,7 @@
                         <group width="1" alignment="left" layout="vertical" id="2uY-Pg-bKJ">
                             <items>
                                 <separator alignment="left" alpha="0.0" id="2Ve-Wr-wwB"/>
-                                <group width="1" alignment="left" id="dG7-EC-jbM">
-                                    <items>
-                                        <label alignment="left" verticalAlignment="center" text="Label" id="glJ-VJ-Ari">
-                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <fontDescription key="font" type="system" weight="semibold" pointSize="10"/>
-                                        </label>
-                                    </items>
-                                    <edgeInsets key="margins" left="8" right="0.0" top="0.0" bottom="0.0"/>
-                                </group>
-                                <separator alignment="left" alpha="0.0" id="1cB-mf-Vpf"/>
-                                <group width="1" height="131" alignment="left" contentMode="scaleAspectFill" layout="vertical" radius="20" id="EHH-7P-GXS">
+                                <group width="1" alignment="left" contentMode="scaleAspectFill" layout="vertical" radius="20" id="EHH-7P-GXS">
                                     <items>
                                         <label alignment="left" text="Label" numberOfLines="0" id="lff-gc-cSX">
                                             <fontDescription key="font" type="boldSystem" pointSize="16"/>
@@ -107,14 +97,40 @@
                                             <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="font" type="system" weight="semibold" pointSize="15"/>
                                         </label>
-                                        <label alignment="left" text="Label" id="ZYa-pw-7Db">
-                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
-                                            <fontDescription key="font" type="system" weight="semibold" pointSize="10"/>
-                                        </label>
                                         <label alignment="left" text="Label" id="RZ8-64-CtS">
                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
                                             <fontDescription key="font" type="system" weight="semibold" pointSize="10"/>
                                         </label>
+                                        <group width="1" alignment="left" id="26q-ok-HUc">
+                                            <items>
+                                                <group alignment="left" verticalAlignment="center" id="dG7-EC-jbM">
+                                                    <items>
+                                                        <label alignment="left" verticalAlignment="center" text="Label" id="glJ-VJ-Ari">
+                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <fontDescription key="font" type="system" weight="semibold" pointSize="10"/>
+                                                        </label>
+                                                    </items>
+                                                    <edgeInsets key="margins" left="8" right="8" top="0.0" bottom="0.0"/>
+                                                </group>
+                                                <group width="20" height="20" alignment="right" verticalAlignment="center" radius="10" id="Yja-Xg-hkK">
+                                                    <items>
+                                                        <button width="12" height="12" alignment="center" verticalAlignment="center" backgroundImage="star" id="hx7-Q1-q49">
+                                                            <fontDescription key="font" type="system" pointSize="10"/>
+                                                            <connections>
+                                                                <action selector="favoriteButtonAction" destination="iBf-Iz-ilU" id="4qQ-3p-ZQh"/>
+                                                            </connections>
+                                                        </button>
+                                                    </items>
+                                                    <gestureRecognizers>
+                                                        <tapGestureRecognizer id="dj5-tk-grS">
+                                                            <connections>
+                                                                <action selector="favoriteButtonGroupTapped:" destination="iBf-Iz-ilU" id="VNa-M2-TTr"/>
+                                                            </connections>
+                                                        </tapGestureRecognizer>
+                                                    </gestureRecognizers>
+                                                </group>
+                                            </items>
+                                        </group>
                                     </items>
                                     <edgeInsets key="margins" left="8" right="8" top="8" bottom="8"/>
                                 </group>
@@ -124,8 +140,9 @@
                     <connections>
                         <outlet property="categoriaIndicador" destination="dG7-EC-jbM" id="qxO-C8-lGU"/>
                         <outlet property="categoriaLabel" destination="glJ-VJ-Ari" id="CAT-Dz-0W3"/>
-                        <outlet property="data" destination="ZYa-pw-7Db" id="1dN-wi-ak7"/>
                         <outlet property="eventoDescriptionGroup" destination="EHH-7P-GXS" id="Tia-Pl-JH9"/>
+                        <outlet property="favoriteButton" destination="hx7-Q1-q49" id="x7R-bh-F2h"/>
+                        <outlet property="favoriteButtonGroup" destination="Yja-Xg-hkK" id="y0R-A4-NWz"/>
                         <outlet property="local" destination="RZ8-64-CtS" id="ToT-Xd-llN"/>
                         <outlet property="palestrante" destination="Yea-Jy-12n" id="ecx-ZP-43j"/>
                         <outlet property="titulo" destination="lff-gc-cSX" id="9qc-2H-HQN"/>
