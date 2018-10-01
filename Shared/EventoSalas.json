@@ -1,178 +1,179 @@
-[
- {
- "nome":"Abertura Weekomp",
- "sessao":"Gameverse",
- "palestrante":"Gabriel Palhares",
- "horario":"18:30",
- "dia":"16.10.18",
- "local":"Mini-Auditório"
- },
- {
- "nome":"Introdução a orientação a modelos",
- "sessao":"Code Space",
- "palestrante":"Flavio Cavalcante",
- "horario":"14:45",
- "dia":"17.10.18",
- "local":"Mini-Auditório"
- },
- {
- "nome":"Desenvolvendo histórias épicas para games",
- "sessao":"Gameverse",
- "palestrante":"Guilherme Araujo",
- "horario":"18:30",
- "dia":"16.10.18",
- "local":"Mini-Auditório"
- },
- {
- "nome":"Tecnologias para IoT",
- "sessao":"Hard Space",
- "palestrante":"Isabel Frota",
- "horario":"14:45",
- "dia":"18.10.18",
- "local":"Mini-Auditório"
- },
- {
- "nome":"O mundo React",
- "sessao":"Web Night",
- "palestrante":"Gabriel Santos",
- "horario":"18:30",
- "dia":"19.10.18",
- "local":"Mini-Auditório"
- },
- {
- "nome":"Como escrever programas",
- "sessao":"Code Space",
- "palestrante":"Julio Oliveira",
- "horario":"8:00",
- "dia":"17.10.18",
- "local":"lab.Redes 2"
- },
- {
- "nome":"Introdução ao OpenCV",
- "sessao":"Code Space",
- "palestrante":"Gabriela Bezerra",
- "horario":"14:00",
- "dia":"17.10.18",
- "local":"Mini-Auditório"
- },
- {
- "nome":"Entrando no universo de desenvolvimento de jogos",
- "sessao":"Gameverse",
- "palestrante":"Matehus & Rennan",
- "horario":"18:30",
- "dia":"16.10.18",
- "local":"Mini-Auditório"
- },
- {
- "nome":"Aplicação de PDI e machine learning em sistemas embarcados",
- "sessao":"Code Space",
- "palestrante":"David Silva",
- "horario":"16:00",
- "dia":"17.10.18",
- "local":"Mini-Auditório"
- },
- {
- "nome":"Introdução ao uso do Design Thinking no desenvolvimento de software",
- "sessao":"Code Space",
- "palestrante":"Gabriela Bezerra",
- "horario":"14:00",
- "dia":"17.10.18",
- "local":"Mini-Auditório"
- },
- {
- "nome":"Comunicação wi-fi & bluetooth",
- "sessao":"Hard Space",
- "palestrante":"Jardel Alves",
- "horario":"8:00",
- "dia":"18.10.18",
- "local":"lab.Semb"
- },
- {
- "nome":"O engenheiro 4.0",
- "sessao":"Hard Space",
- "palestrante":"Guilherme Queiroz",
- "horario":"14:00",
- "dia":"18.10.18",
- "local":"Mini-Auditório"
- },
- {
- "nome":"Introdução a experiência de usuário",
- "sessao":"Gameverse",
- "palestrante":"Ítalo Furtado",
- "horario":"18:30",
- "dia":"16.10.18",
- "local":"Mini-Auditório"
- },
- {
- "nome":"IOT: Automatização da luz com nodeMCU & lua",
- "sessao":"Hard Space",
- "palestrante":"Leonardo Gomes",
- "horario":"16:00",
- "dia":"18.10.18",
- "local":"Mini-Auditório"
- },
- {
- "nome":"Comunicação e sensores com arduíno",
- "sessao":"Hard Space",
- "palestrante":"Luiz Gabriel",
- "horario":"16:45",
- "dia":"18.10.18",
- "local":"Mini-Auditório"
- },
- {
- "nome":"Introdução à CTF e Wargames com método de treinamento em Cibersegurança",
- "sessao":"Hack Space",
- "palestrante":"Guilherme Queiroz",
- "horario":"8:00",
- "dia":"19.10.18",
- "local":"LMC 2"
- },
- {
- "nome":"maratonahacker.net.br",
- "sessao":"Hack Space",
- "palestrante":"Prof. Rodrigo Costa",
- "horario":"14:00",
- "dia":"19.10.18",
- "local":"LMC 2-3"
- },
- {
- "nome":"Iniciando uma gloriosa jornada com angular",
- "sessao":"Web Night",
- "palestrante":"Mateus Nobre",
- "horario":"18:30",
- "dia":"19.10.18",
- "local":"Mini-Auditório"
- },
- {
- "nome":"Criando seu primeiro jogo com unity",
- "sessao":"Gameverse",
- "palestrante":"Gustavo Portela",
- "horario":"18:30",
- "dia":"16.10.18",
- "local":"Mini-Auditório"
- },
- {
- "nome":"Vue Vuado",
- "sessao":"Web Night",
- "palestrante":"Leonardo Silveira",
- "horario":"18:30",
- "dia":"19.10.18",
- "local":"Mini-Auditório"
- },
- {
- "nome":"O que há de novo no CSS",
- "sessao":"Web Night",
- "palestrante":"Mateus Nobre",
- "horario":"18:30",
- "dia":"19.10.18",
- "local":"Mini-Auditório"
- },
- {
- "nome":"Encerramento Weekomp",
- "sessao":"Web Night",
- "palestrante":"Banda Stormclouds",
- "horario":"18:30",
- "dia":"19.10.18",
- "local":"Mini-Auditório"
- },
- ]
+ [
+  {
+  "nome":"Abertura Weekomp",
+  "sessao":"Gameverse",
+  "palestrante":"Gabriel Palhares",
+  "horario":"18:30",
+  "dia":"16.10.18",
+  "local":"Mini-Auditório"
+  },
+  {
+  "nome":"Introdução a orientação a modelos",
+  "sessao":"Code Space",
+  "palestrante":"Flavio Cavalcante",
+  "horario":"14:45",
+  "dia":"17.10.18",
+  "local":"Mini-Auditório"
+  },
+  {
+  "nome":"Desenvolvendo histórias épicas para games",
+  "sessao":"Gameverse",
+  "palestrante":"Guilherme Araujo",
+  "horario":"18:30",
+  "dia":"16.10.18",
+  "local":"Mini-Auditório"
+  },
+  {
+  "nome":"Tecnologias para IoT",
+  "sessao":"Hard Space",
+  "palestrante":"Isabel Frota",
+  "horario":"14:45",
+  "dia":"18.10.18",
+  "local":"Mini-Auditório"
+  },
+  {
+  "nome":"O mundo React",
+  "sessao":"Web Night",
+  "palestrante":"Gabriel Santos",
+  "horario":"18:30",
+  "dia":"19.10.18",
+  "local":"Mini-Auditório"
+  },
+  {
+  "nome":"Como escrever programas",
+  "sessao":"Code Space",
+  "palestrante":"Julio Oliveira",
+  "horario":"8:00",
+  "dia":"17.10.18",
+  "local":"lab.Redes 2"
+  },
+  {
+  "nome":"Introdução ao OpenCV",
+  "sessao":"Code Space",
+  "palestrante":"Gabriela Bezerra",
+  "horario":"14:00",
+  "dia":"17.10.18",
+  "local":"Mini-Auditório"
+  },
+  {
+  "nome":"Entrando no universo de desenvolvimento de jogos",
+  "sessao":"Gameverse",
+  "palestrante":"Matehus & Rennan",
+  "horario":"18:30",
+  "dia":"16.10.18",
+  "local":"Mini-Auditório"
+  },
+  {
+  "nome":"Aplicação de PDI e machine learning em sistemas embarcados",
+  "sessao":"Code Space",
+  "palestrante":"David Silva",
+  "horario":"16:00",
+  "dia":"17.10.18",
+  "local":"Mini-Auditório"
+  },
+  {
+  "nome":"Introdução ao uso do Design Thinking no desenvolvimento de software",
+  "sessao":"Code Space",
+  "palestrante":"Gabriela Bezerra",
+  "horario":"14:00",
+  "dia":"17.10.18",
+  "local":"Mini-Auditório"
+  },
+  {
+  "nome":"Comunicação wi-fi & bluetooth",
+  "sessao":"Hard Space",
+  "palestrante":"Jardel Alves",
+  "horario":"8:00",
+  "dia":"18.10.18",
+  "local":"lab.Semb"
+  },
+  {
+  "nome":"O engenheiro 4.0",
+  "sessao":"Hard Space",
+  "palestrante":"Guilherme Queiroz",
+  "horario":"14:00",
+  "dia":"18.10.18",
+  "local":"Mini-Auditório"
+  },
+  {
+  "nome":"Introdução a experiência de usuário",
+  "sessao":"Gameverse",
+  "palestrante":"Ítalo Furtado",
+  "horario":"18:30",
+  "dia":"16.10.18",
+  "local":"Mini-Auditório"
+  },
+  {
+  "nome":"IOT: Automatização da luz com nodeMCU & lua",
+  "sessao":"Hard Space",
+  "palestrante":"Leonardo Gomes",
+  "horario":"16:00",
+  "dia":"18.10.18",
+  "local":"Mini-Auditório"
+  },
+  {
+  "nome":"Comunicação e sensores com arduíno",
+  "sessao":"Hard Space",
+  "palestrante":"Luiz Gabriel",
+  "horario":"16:45",
+  "dia":"18.10.18",
+  "local":"Mini-Auditório"
+  },
+  {
+  "nome":"Introdução à CTF e Wargames com método de treinamento em Cibersegurança",
+  "sessao":"Hack Space",
+  "palestrante":"Guilherme Queiroz",
+  "horario":"8:00",
+  "dia":"19.10.18",
+  "local":"LMC 2"
+  },
+  {
+  "nome":"maratonahacker.net.br",
+  "sessao":"Hack Space",
+  "palestrante":"Prof. Rodrigo Costa",
+  "horario":"14:00",
+  "dia":"19.10.18",
+  "local":"LMC 2-3"
+  },
+  {
+  "nome":"Iniciando uma gloriosa jornada com angular",
+  "sessao":"Web Night",
+  "palestrante":"Mateus Nobre",
+  "horario":"18:30",
+  "dia":"19.10.18",
+  "local":"Mini-Auditório"
+  },
+  {
+  "nome":"Criando seu primeiro jogo com unity",
+  "sessao":"Gameverse",
+  "palestrante":"Gustavo Portela",
+  "horario":"18:30",
+  "dia":"16.10.18",
+  "local":"Mini-Auditório"
+  },
+  {
+  "nome":"Vue Vuado",
+  "sessao":"Web Night",
+  "palestrante":"Leonardo Silveira",
+  "horario":"18:30",
+  "dia":"19.10.18",
+  "local":"Mini-Auditório"
+  },
+  {
+  "nome":"O que há de novo no CSS",
+  "sessao":"Web Night",
+  "palestrante":"Mateus Nobre",
+  "horario":"18:30",
+  "dia":"19.10.18",
+  "local":"Mini-Auditório"
+  },
+  {
+  "nome":"Encerramento Weekomp",
+  "sessao":"Web Night",
+  "palestrante":"Banda Stormclouds",
+  "horario":"18:30",
+  "dia":"19.10.18",
+  "local":"Mini-Auditório"
+  },
+  ]
+
