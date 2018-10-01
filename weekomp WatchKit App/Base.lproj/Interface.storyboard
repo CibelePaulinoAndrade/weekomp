@@ -14,6 +14,14 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="TalksInterfaceController" customModule="weekomp_WatchKit_Extension">
                     <items>
+                        <group width="1" alignment="left" id="G26-nd-Jh5">
+                            <items>
+                                <label alignment="left" text="WEEKOMP" id="aLI-XS-2YE">
+                                    <color key="textColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="14"/>
+                                </label>
+                            </items>
+                        </group>
                         <table alignment="left" spacing="3" id="fWd-Wa-MYP">
                             <items>
                                 <tableRow identifier="EventoRow" id="Yuz-XH-7Ui" customClass="EventosRowController" customModule="weekomp_WatchKit_Extension">
@@ -21,25 +29,28 @@
                                         <items>
                                             <group width="1" alignment="left" spacing="3" id="YFk-Re-tus">
                                                 <items>
-                                                    <group width="1" alignment="left" spacing="5" id="wRM-I8-tEH">
+                                                    <group width="1" alignment="left" spacing="4" id="wRM-I8-tEH">
                                                         <items>
-                                                            <group width="0.25" height="0.90000000000000002" heightAdjustment="-1" alignment="left" verticalAlignment="center" id="xQp-Sw-P3P">
+                                                            <group width="0.0" height="0.90000000000000002" alignment="left" verticalAlignment="center" id="xQp-Sw-P3P">
                                                                 <items>
-                                                                    <imageView alignment="center" verticalAlignment="center" image="Plane" id="N84-14-jRb"/>
+                                                                    <separator alignment="left" id="DSZ-8O-HEI">
+                                                                        <color key="color" red="0.47058823529999999" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </separator>
                                                                 </items>
-                                                                <color key="backgroundColor" red="0.47058823529999999" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </group>
-                                                            <group width="0.75" alignment="left" verticalAlignment="center" layout="vertical" id="thM-WH-53y">
+                                                            <group width="0.97999999999999998" alignment="right" verticalAlignment="center" layout="vertical" id="thM-WH-53y">
                                                                 <items>
                                                                     <label alignment="left" text="Abertura WeeKomp" numberOfLines="0" id="TVf-eq-v4i">
-                                                                        <fontDescription key="font" type="boldSystem" pointSize="14"/>
+                                                                        <fontDescription key="font" type="system" pointSize="16"/>
                                                                     </label>
                                                                     <group width="1" alignment="left" id="DRz-h2-WdP">
                                                                         <items>
                                                                             <label alignment="left" text="18:00" id="phZ-QJ-FuM">
+                                                                                <color key="textColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <fontDescription key="font" type="system" weight="medium" pointSize="12"/>
                                                                             </label>
                                                                             <label alignment="right" text="16.10.18" id="0YF-n8-w0b">
+                                                                                <color key="textColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <fontDescription key="font" type="system" weight="medium" pointSize="12"/>
                                                                             </label>
                                                                         </items>
@@ -53,11 +64,10 @@
                                         </items>
                                     </group>
                                     <connections>
-                                        <outlet property="backgroundImagem" destination="xQp-Sw-P3P" id="BEt-ec-tn3"/>
-                                        <outlet property="imagemCategoria" destination="N84-14-jRb" id="JWR-Sn-2SW"/>
                                         <outlet property="labelDia" destination="0YF-n8-w0b" id="Nws-Ze-4m4"/>
                                         <outlet property="labelHorario" destination="phZ-QJ-FuM" id="ODp-ng-hYS"/>
                                         <outlet property="labelNome" destination="TVf-eq-v4i" id="a7t-Me-Kj3"/>
+                                        <outlet property="separator" destination="DSZ-8O-HEI" id="RCq-9I-soE"/>
                                     </connections>
                                 </tableRow>
                             </items>

@@ -20,7 +20,6 @@ class TalksInterfaceController: WKInterfaceController {
         
         tableEventos.setNumberOfRows(eventos.count, withRowType: "EventoRow")
         for i in 0..<tableEventos.numberOfRows {
-            print(i)
             guard let controller = tableEventos.rowController(at: i) as? EventosRowController else {continue}
             controller.evento = eventos[i]
         }
