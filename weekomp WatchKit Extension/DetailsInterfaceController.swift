@@ -12,11 +12,12 @@ import Foundation
 
 class DetailsInterfaceController: WKInterfaceController {
     @IBOutlet var categoriaIndicador: WKInterfaceGroup!
+    @IBOutlet var categoriaLabel: WKInterfaceLabel!
     @IBOutlet var titulo: WKInterfaceLabel!
     @IBOutlet var palestrante: WKInterfaceLabel!
     @IBOutlet var data: WKInterfaceLabel!
     @IBOutlet var local: WKInterfaceLabel!
-    @IBOutlet var allElementsGroup: WKInterfaceGroup!
+    @IBOutlet var eventoDescriptionGroup: WKInterfaceGroup!
     
     var evento: Evento?
     var isPresencaConfirmada = false
@@ -42,14 +43,15 @@ class DetailsInterfaceController: WKInterfaceController {
     }
 
     func setCategoriaIndicador (){
-        self.categoriaIndicador.setHeight(5)
+        self.categoriaIndicador.setHeight(18)
         self.categoriaIndicador.setWidth(WKInterfaceDevice.current().screenBounds.size.width)
         self.categoriaIndicador.setBackgroundColor(evento?.getColor())
-        self.categoriaIndicador.setCornerRadius(0)
+        self.categoriaIndicador.setCornerRadius(2)
     }
     
     func setValores (_ evento: Evento) {
         self.setCategoriaIndicador()
+        self.categoriaLabel.setText(evento.sessao)
         self.titulo.setText(evento.nome)
         self.palestrante.setText(evento.palestrante)
         self.data.setText(evento.dia.replacingOccurrences(of: ".", with: "/") + " às " + evento.horario)
