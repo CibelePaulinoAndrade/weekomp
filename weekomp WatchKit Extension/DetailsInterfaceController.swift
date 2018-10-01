@@ -16,13 +16,13 @@ class DetailsInterfaceController: WKInterfaceController {
     @IBOutlet var palestrante: WKInterfaceLabel!
     @IBOutlet var data: WKInterfaceLabel!
     @IBOutlet var local: WKInterfaceLabel!
+    @IBOutlet var allElementsGroup: WKInterfaceGroup!
     
     var evento: Evento?
     var isPresencaConfirmada = false
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        
         // Configure interface objects here.
         let novoEvento = Evento.allEventos()[0]
         self.evento = novoEvento

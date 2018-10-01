@@ -22,20 +22,26 @@
                 <controller id="iBf-Iz-ilU" customClass="DetailsInterfaceController" customModule="weekomp_WatchKit_Extension">
                     <items>
                         <group width="1" alignment="left" id="dG7-EC-jbM"/>
-                        <label alignment="left" text="Label" id="lff-gc-cSX">
-                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
-                        </label>
-                        <label alignment="left" text="Label" id="Yea-Jy-12n">
-                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
-                        </label>
-                        <label alignment="left" text="Label" id="ZYa-pw-7Db">
-                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
-                        </label>
-                        <label alignment="left" text="Label" id="RZ8-64-CtS">
-                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
-                        </label>
+                        <group width="1" height="162" alignment="left" backgroundImage="palestrante" contentMode="scaleAspectFit" layout="vertical" radius="20" id="EHH-7P-GXS">
+                            <items>
+                                <label alignment="left" text="Label" numberOfLines="0" id="lff-gc-cSX">
+                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                </label>
+                                <label alignment="left" text="Label" id="Yea-Jy-12n">
+                                    <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                </label>
+                                <label alignment="left" text="Label" id="ZYa-pw-7Db">
+                                    <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                </label>
+                                <label alignment="left" text="Label" id="RZ8-64-CtS">
+                                    <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                </label>
+                            </items>
+                            <edgeInsets key="margins" left="8" right="8" top="8" bottom="8"/>
+                        </group>
                     </items>
                     <connections>
+                        <outlet property="allElementsGroup" destination="EHH-7P-GXS" id="2Ml-YX-SZf"/>
                         <outlet property="categoriaIndicador" destination="dG7-EC-jbM" id="qxO-C8-lGU"/>
                         <outlet property="data" destination="ZYa-pw-7Db" id="1dN-wi-ak7"/>
                         <outlet property="local" destination="RZ8-64-CtS" id="ToT-Xd-llN"/>
@@ -44,7 +50,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="468" y="345"/>
+            <point key="canvasLocation" x="467.28205128205133" y="344.79487179487182"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
