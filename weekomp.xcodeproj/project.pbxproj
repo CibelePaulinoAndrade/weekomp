@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BE10D5F62163A2E7002E9F04 /* Evento.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE2DF1C215D171900F7EC9E /* Evento.swift */; };
+		BE10D5F82163AB66002E9F04 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE10D5F72163AB65002E9F04 /* DetailsViewController.swift */; };
 		BE4789352162563400F60E9F /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4789342162563400F60E9F /* Notification.swift */; };
 		BE4789362162563400F60E9F /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4789342162563400F60E9F /* Notification.swift */; };
 		BE4789382162577A00F60E9F /* EventoSalas.json in Resources */ = {isa = PBXBuildFile; fileRef = BE4789372162577A00F60E9F /* EventoSalas.json */; };
@@ -75,6 +76,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BE10D5F72163AB65002E9F04 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		BE4789342162563400F60E9F /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		BE4789372162577A00F60E9F /* EventoSalas.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = EventoSalas.json; sourceTree = "<group>"; };
 		BEE2DED6215D121C00F7EC9E /* weekomp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weekomp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,6 +160,7 @@
 				BEE2DEE0215D121E00F7EC9E /* Assets.xcassets */,
 				BEE2DEE2215D121E00F7EC9E /* LaunchScreen.storyboard */,
 				BEE2DEE5215D121E00F7EC9E /* Info.plist */,
+				BE10D5F72163AB65002E9F04 /* DetailsViewController.swift */,
 			);
 			path = weekomp;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				BEE2DEDC215D121D00F7EC9E /* ViewController.swift in Sources */,
 				BEE2DEDA215D121C00F7EC9E /* AppDelegate.swift in Sources */,
 				BE4789352162563400F60E9F /* Notification.swift in Sources */,
+				BE10D5F82163AB66002E9F04 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -31,13 +31,14 @@ class Evento: Codable {
             print(error)
         }
         
-        return eventos
-//        return eventos.sorted(by: { (evento1, evento2) -> Bool in
-//            let dayEvento1 = evento1.dia.split(separator: ".")[0]
-//            let dayEvento1 = evento1.dia.split(separator: ".")[0]
-//
-//
-//        })
+        //return eventos
+        return eventos.sorted(by: { (evento1, evento2) -> Bool in
+            let dayEvento1 = evento1.dia.split(separator: ".")[0]
+            let dayEvento2 = evento2.dia.split(separator: ".")[0]
+            return dayEvento1 <= dayEvento2
+
+
+        })
         
     }
     
