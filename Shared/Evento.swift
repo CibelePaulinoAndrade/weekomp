@@ -35,6 +35,19 @@ class Evento: Codable {
         
     }
     
+    class func dayEventos(dia: String) -> [Evento]{
+        let eventos = Evento.allEventos()
+        var eventosDia: [Evento] = []
+        
+        for i in eventos {
+            if i.dia == dia {
+                eventosDia.append(i)
+            }
+        }
+        
+        return eventosDia
+    }
+    
     func getColor() -> UIColor {
         switch sessao {
         case "Gameverse":
