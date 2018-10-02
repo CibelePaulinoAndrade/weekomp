@@ -25,12 +25,15 @@ class DetailsInterfaceController: WKInterfaceController {
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
+        
+        self.setTitle("OK")
+        
         // Configure interface objects here.
         self.evento = context as? Evento
         self.setValores(evento!)
         self.favoriteButtonGroup.setBackgroundColor(evento?.getColor())
         
-        addMenuItem(with: .accept, title: "Favoritar", action: #selector(menuItemAction))
+        addMenuItem(with: #imageLiteral(resourceName: "star-3"), title: "Favoritar", action: #selector(menuItemAction))
     }
 
     override func willActivate() {
@@ -59,12 +62,10 @@ class DetailsInterfaceController: WKInterfaceController {
     
     
     @IBAction func favoriteButtonGroupTapped(_ sender: Any) {
-        print("tap")
         self.handleFavorite()
     }
     
     @IBAction func favoriteButtonAction() {
-        print("but")
         self.handleFavorite()
     }
     
@@ -76,11 +77,11 @@ class DetailsInterfaceController: WKInterfaceController {
         isFavorite = !isFavorite
         clearAllMenuItems()
         if isFavorite {
-            self.favoriteButton.setBackgroundImage(#imageLiteral(resourceName: "filled_star"))
-            addMenuItem(with: .decline, title: "Desfavoritar", action: #selector(menuItemAction))
+            self.favoriteButton.setBackgroundImage(#imageLiteral(resourceName: "star-3"))
+            addMenuItem(with: #imageLiteral(resourceName: "star-5"), title: "Desfavoritar", action: #selector(menuItemAction))
         } else {
-            self.favoriteButton.setBackgroundImage(#imageLiteral(resourceName: "star"))
-            addMenuItem(with: .accept, title: "Favoritar", action: #selector(menuItemAction))
+            self.favoriteButton.setBackgroundImage(#imageLiteral(resourceName: "star-5"))
+            addMenuItem(with: #imageLiteral(resourceName: "star-3"), title: "Favoritar", action: #selector(menuItemAction))
         }
     }
     
