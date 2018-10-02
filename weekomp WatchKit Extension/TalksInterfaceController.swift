@@ -13,31 +13,37 @@ import Foundation
 class TalksInterfaceController: WKInterfaceController {
     
     @IBOutlet var tableEventos: WKInterfaceTable!
-    var eventos = Evento.dayEventos(dia: "16.10.18")
+    var eventos: [Evento]?
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        
-        tableEventos.setNumberOfRows(eventos.count, withRowType: "EventoRow")
-        for i in 0..<tableEventos.numberOfRows {
-            guard let controller = tableEventos.rowController(at: i) as? EventosRowController else {continue}
-            controller.evento = eventos[i]
+        if let idFavoritos = UserDefaults.standard.array(forKey: "Favorites") as? [String] {
+            let favoritos = Evento.getFavoritos(idFavoritos)
+            self.eventos = favoritos
+            
+            tableEventos.setNumberOfRows(favoritos.count, withRowType: "EventoRow")
+            for i in 0..<favoritos.count {
+                guard let controller = tableEventos.rowController(at: i) as? EventosRowController else {continue}
+                controller.evento = favoritos[i]
+            }
         }
+        
     }
     
     override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
-        let evento = eventos[rowIndex]
-        presentController(withName: "Details", context: evento)
+        let evento = eventos![rowIndex]
+        presentController(withName: "Details", context: (evento, self))
     }
+    
+}
 
-    override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
-        super.willActivate()
+extension TalksInterfaceController: DefavoriteDelegate {
+    func reloadTable(_ evento: Evento) {
+        for (index, item) in self.eventos!.enumerated() {
+            if (item === evento){
+                self.tableEventos.removeRows(at: IndexSet(index..<index+1))
+            }
+        }
     }
-
-    override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
-        super.didDeactivate()
-    }
-
+    
 }

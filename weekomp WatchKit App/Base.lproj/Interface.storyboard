@@ -14,14 +14,6 @@
             <objects>
                 <controller title="WEEKOMP" id="AgC-eL-Hgc" customClass="TalksInterfaceController" customModule="weekomp_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="left" id="G26-nd-Jh5">
-                            <items>
-                                <label alignment="left" text="16.10.18" id="aLI-XS-2YE">
-                                    <color key="textColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <fontDescription key="font" type="system" weight="semibold" pointSize="12"/>
-                                </label>
-                            </items>
-                        </group>
                         <table alignment="left" spacing="3" id="fWd-Wa-MYP">
                             <items>
                                 <tableRow identifier="EventoRow" id="Yuz-XH-7Ui" customClass="EventosRowController" customModule="weekomp_WatchKit_Extension">

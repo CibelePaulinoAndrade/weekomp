@@ -74,4 +74,17 @@ class Evento: Codable {
             
         }
     }
+    
+   class func getFavoritos(_ ids: [String]) -> [Evento]{
+        let eventos = Evento.allEventos()
+        var eventosFavoritos: [Evento] = []
+        
+        ids.forEach { (favEvento) in
+            if let containEvento = eventos.first(where: { $0.nome == favEvento }){
+                eventosFavoritos.append(containEvento)
+            }
+        }
+        
+        return eventosFavoritos
+    }
 }

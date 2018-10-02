@@ -20,33 +20,33 @@ class DetailsInterfaceController: WKInterfaceController {
     @IBOutlet var favoriteButton: WKInterfaceButton!
     
     var evento: Evento?
-    var isFavorite = false
+    var isFavorite = true
+    var delegate: DefavoriteDelegate?
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        self.setTitle("OK")
+        let contexto = context as! (evento: Evento, delegate: DefavoriteDelegate)
+        self.delegate = contexto.delegate
         
         // Configure interface objects here.
-        self.evento = context as? Evento
+        self.setTitle("OK")
+        self.evento = contexto.evento
         self.setValores(evento!)
         self.favoriteButtonGroup.setBackgroundColor(evento?.getColor())
         
-        addMenuItem(with: #imageLiteral(resourceName: "star-3"), title: "Favoritar", action: #selector(menuItemAction))
-        loadDefaults()
+        self.addMenuItem(with: #imageLiteral(resourceName: "star-5"), title: "Desfavoritar", action: #selector(menuItemAction))
+        self.favoriteButton.setBackgroundImage(#imageLiteral(resourceName: "star-3"))
         
     }
 
-    override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
-        super.willActivate()
+    override func willDisappear() {
+        super.willDisappear()
+        
+        if (!self.isFavorite){
+            self.delegate?.reloadTable(self.evento!)
+        }
     }
-
-    override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
-        super.didDeactivate()
-    }
-
     func setCategoriaIndicador (){
         self.categoriaLabel.setTextColor(evento?.getColor())
     }
@@ -57,17 +57,6 @@ class DetailsInterfaceController: WKInterfaceController {
         self.titulo.setText(evento.nome)
         self.palestrante.setText(evento.palestrante)
         self.local.setText(evento.local + " às " + evento.horario)
-    }
-    
-    private func loadDefaults() {
-        guard let favorites = UserDefaults.standard.array(forKey: "Favorites") as? [String] else { return }
-        print("load - \(favorites)")
-        if favorites.contains((evento?.nome)!) {
-            self.isFavorite = true
-            self.clearAllMenuItems()
-            self.addMenuItem(with: #imageLiteral(resourceName: "star-5"), title: "Desfavoritar", action: #selector(menuItemAction))
-            self.favoriteButton.setBackgroundImage(#imageLiteral(resourceName: "star-3"))
-        }
     }
     
     
