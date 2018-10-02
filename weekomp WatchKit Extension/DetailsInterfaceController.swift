@@ -64,6 +64,7 @@ class DetailsInterfaceController: WKInterfaceController {
         print("load - \(favorites)")
         if favorites.contains((evento?.nome)!) {
             self.isFavorite = true
+            self.clearAllMenuItems()
             self.addMenuItem(with: #imageLiteral(resourceName: "star-5"), title: "Desfavoritar", action: #selector(menuItemAction))
             self.favoriteButton.setBackgroundImage(#imageLiteral(resourceName: "star-3"))
         }
@@ -87,11 +88,9 @@ class DetailsInterfaceController: WKInterfaceController {
         clearAllMenuItems()
         if isFavorite {
             self.favoriteButton.setBackgroundImage(#imageLiteral(resourceName: "star-3"))
-            clearAllMenuItems()
             addMenuItem(with: #imageLiteral(resourceName: "star-5"), title: "Desfavoritar", action: #selector(menuItemAction))
         } else {
             self.favoriteButton.setBackgroundImage(#imageLiteral(resourceName: "star-5"))
-            clearAllMenuItems()
             addMenuItem(with: #imageLiteral(resourceName: "star-3"), title: "Favoritar", action: #selector(menuItemAction))
         }
         
