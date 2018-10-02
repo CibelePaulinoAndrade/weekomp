@@ -34,7 +34,7 @@ class DetailsViewController: UIViewController {
         buttonFavorite.backgroundColor = colorTag
         buttonFavorite.layer.cornerRadius = 10
         buttonFavorite.clipsToBounds = true
-        // Verii
+
         // Do any additional setup after loading the view.
     }
 
