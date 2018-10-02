@@ -1,19 +1,17 @@
 //
-//  TalksInterfaceController.swift
+//  Talks3InterfaceController.swift
 //  weekomp WatchKit Extension
 //
-//  Created by Ada 2018 on 27/09/2018.
+//  Created by Ada 2018 on 01/10/2018.
 //  Copyright © 2018 Academy. All rights reserved.
 //
 
 import WatchKit
-import Foundation
 
-
-class TalksInterfaceController: WKInterfaceController {
+class Talks3InterfaceController: WKInterfaceController {
     
     @IBOutlet var tableEventos: WKInterfaceTable!
-    var eventos = Evento.dayEventos(dia: "16.10.18")
+    var eventos = Evento.dayEventos(dia: "18.10.18")
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -29,15 +27,15 @@ class TalksInterfaceController: WKInterfaceController {
         let evento = eventos[rowIndex]
         presentController(withName: "Details", context: evento)
     }
-
+    
+    
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
     }
-
+    
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-
 }

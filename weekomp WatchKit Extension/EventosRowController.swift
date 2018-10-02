@@ -11,8 +11,8 @@ import WatchKit
 class EventosRowController: NSObject {
     @IBOutlet var labelNome: WKInterfaceLabel!
     @IBOutlet var labelHorario: WKInterfaceLabel!
-    @IBOutlet var labelDia: WKInterfaceLabel!
-    @IBOutlet var separator: WKInterfaceSeparator!
+    
+    @IBOutlet var background: WKInterfaceGroup!
     
     var evento: Evento? {
         didSet {
@@ -20,24 +20,21 @@ class EventosRowController: NSObject {
             
             labelNome.setText(evento.nome)
             labelHorario.setText(evento.horario)
-            labelDia.setText(evento.dia)
-            
             
             if evento.sessao == "Gameverse"{
-                separator.setColor(#colorLiteral(red: 0.4705882353, green: 0.4784313725, blue: 1, alpha: 1))
-                
+                background.setBackgroundColor(#colorLiteral(red: 0.4705882353, green: 0.4784313725, blue: 1, alpha: 1))
             }
             else if evento.sessao == "Code Space"{
-                separator.setColor(#colorLiteral(red: 0, green: 0.9607843137, blue: 0.9176470588, alpha: 1))
+                background.setBackgroundColor(#colorLiteral(red: 0, green: 0.9607843137, blue: 0.9176470588, alpha: 1))
             }
             else if evento.sessao == "Hard Space"{
-                separator.setColor(#colorLiteral(red: 0.9803921569, green: 0.06666666667, blue: 0.3098039216, alpha: 1))
+                background.setBackgroundColor(#colorLiteral(red: 0.9803921569, green: 0.06666666667, blue: 0.3098039216, alpha: 1))
             }
             else if evento.sessao == "Hack Space"{
-                separator.setColor(#colorLiteral(red: 1, green: 0.9019607843, blue: 0.1254901961, alpha: 1))
+                background.setBackgroundColor(#colorLiteral(red: 1, green: 0.9019607843, blue: 0.1254901961, alpha: 1))
             }
             else{
-                separator.setColor(#colorLiteral(red: 0.01568627451, green: 0.8705882353, blue: 0.4431372549, alpha: 1))
+                background.setBackgroundColor(#colorLiteral(red: 0.01568627451, green: 0.8705882353, blue: 0.4431372549, alpha: 1))
             }
         }
     }
