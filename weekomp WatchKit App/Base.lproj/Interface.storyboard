@@ -91,19 +91,18 @@
                                 <group width="1" alignment="left" contentMode="scaleAspectFill" layout="vertical" id="EHH-7P-GXS">
                                     <items>
                                         <label alignment="left" text="Label" numberOfLines="0" id="lff-gc-cSX">
-                                            <fontDescription key="font" type="boldSystem" pointSize="16"/>
+                                            <fontDescription key="font" type="boldSystem" pointSize="18"/>
                                         </label>
                                         <group alignment="left" id="26q-ok-HUc">
                                             <items>
-                                                <group alignment="left" verticalAlignment="center" id="dG7-EC-jbM">
+                                                <group alignment="left" verticalAlignment="center" radius="2" id="dG7-EC-jbM">
                                                     <items>
                                                         <label alignment="left" verticalAlignment="center" text="Label" id="glJ-VJ-Ari">
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <fontDescription key="font" type="system" weight="semibold" pointSize="10"/>
+                                                            <fontDescription key="font" type="system" weight="semibold" pointSize="12"/>
                                                         </label>
                                                     </items>
-                                                    <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <edgeInsets key="margins" left="8" right="8" top="0.0" bottom="0.0"/>
+                                                    <edgeInsets key="margins" left="0.0" right="8" top="0.0" bottom="0.0"/>
                                                 </group>
                                             </items>
                                         </group>
@@ -111,9 +110,9 @@
                                             <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="font" type="system" weight="semibold" pointSize="15"/>
                                         </label>
-                                        <label alignment="left" text="Label" id="RZ8-64-CtS">
+                                        <label alignment="left" text="Label" numberOfLines="0" id="RZ8-64-CtS">
                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
-                                            <fontDescription key="font" type="system" weight="semibold" pointSize="10"/>
+                                            <fontDescription key="font" type="system" weight="semibold" pointSize="12"/>
                                         </label>
                                     </items>
                                     <edgeInsets key="margins" left="0.0" right="0.0" top="8" bottom="8"/>
@@ -142,7 +141,6 @@
                         </group>
                     </items>
                     <connections>
-                        <outlet property="categoriaIndicador" destination="dG7-EC-jbM" id="qxO-C8-lGU"/>
                         <outlet property="categoriaLabel" destination="glJ-VJ-Ari" id="CAT-Dz-0W3"/>
                         <outlet property="eventoDescriptionGroup" destination="EHH-7P-GXS" id="Tia-Pl-JH9"/>
                         <outlet property="favoriteButton" destination="hx7-Q1-q49" id="x7R-bh-F2h"/>
