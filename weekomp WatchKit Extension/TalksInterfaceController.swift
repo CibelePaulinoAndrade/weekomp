@@ -13,6 +13,7 @@ import Foundation
 class TalksInterfaceController: WKInterfaceController {
     
     @IBOutlet var tableEventos: WKInterfaceTable!
+    @IBOutlet var group: WKInterfaceGroup!
     var eventos = Evento.allEventos()
     
     override func awake(withContext context: Any?) {
@@ -28,6 +29,11 @@ class TalksInterfaceController: WKInterfaceController {
     override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
         let evento = eventos[rowIndex]
         presentController(withName: "Details", context: evento)
+    }
+
+    
+    override func scroll(to object: WKInterfaceObject, at scrollPosition: WKInterfaceScrollPosition, animated: Bool) {
+        print("scroll")
     }
 
     override func willActivate() {

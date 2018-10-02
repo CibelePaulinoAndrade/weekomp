@@ -32,6 +32,22 @@ class Evento: Codable {
         }
         
         return eventos
+//        return eventos.sorted(by: { (evento1, evento2) -> Bool in
+//            let dayEvento1 = evento1.dia.split(separator: ".")[0]
+//            let dayEvento1 = evento1.dia.split(separator: ".")[0]
+//
+//
+//        })
+        
+    }
+    
+    class func eventsOf(day: String) -> [Evento]{
+        let allEvents = self.allEventos()
+        return allEvents.filter({ (evento) -> Bool in
+            let dayEvent = evento.dia.split(separator: ".")[0]
+            return dayEvent == day
+        })
+        
         
     }
     

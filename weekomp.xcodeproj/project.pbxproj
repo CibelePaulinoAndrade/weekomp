@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE10D5F62163A2E7002E9F04 /* Evento.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE2DF1C215D171900F7EC9E /* Evento.swift */; };
 		BE4789352162563400F60E9F /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4789342162563400F60E9F /* Notification.swift */; };
 		BE4789362162563400F60E9F /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4789342162563400F60E9F /* Notification.swift */; };
 		BE4789382162577A00F60E9F /* EventoSalas.json in Resources */ = {isa = PBXBuildFile; fileRef = BE4789372162577A00F60E9F /* EventoSalas.json */; };
@@ -331,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE10D5F62163A2E7002E9F04 /* Evento.swift in Sources */,
 				BEE2DEDC215D121D00F7EC9E /* ViewController.swift in Sources */,
 				BEE2DEDA215D121C00F7EC9E /* AppDelegate.swift in Sources */,
 				BE4789352162563400F60E9F /* Notification.swift in Sources */,
@@ -596,8 +598,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GM73VGBYQV;
+				DEVELOPMENT_TEAM = MQ922JMCL6;
 				INFOPLIST_FILE = weekomp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -614,8 +617,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GM73VGBYQV;
+				DEVELOPMENT_TEAM = MQ922JMCL6;
 				INFOPLIST_FILE = weekomp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
