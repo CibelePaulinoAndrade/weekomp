@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14109" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14113" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch42" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="watchOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14031"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14033"/>
     </dependencies>
     <scenes>
         <!--WEEKOMP-->
@@ -60,181 +60,10 @@
                     </items>
                     <connections>
                         <outlet property="tableEventos" destination="fWd-Wa-MYP" id="Hv3-F2-joF"/>
-                        <segue destination="TRg-1i-8gf" kind="relationship" relationship="nextPage" id="293-sH-lIn"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="219.69230769230771" y="336.94871794871796"/>
-        </scene>
-        <!--WEEKOMP-->
-        <scene sceneID="fYa-S2-eVV">
-            <objects>
-                <controller title="WEEKOMP" id="TRg-1i-8gf" customClass="Talks2InterfaceController" customModule="weekomp_WatchKit_Extension">
-                    <items>
-                        <group width="1" alignment="left" id="xQL-6E-WX8">
-                            <items>
-                                <label alignment="left" text="17.10.18" id="MQJ-ZR-uHS">
-                                    <color key="textColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <fontDescription key="font" type="system" weight="semibold" pointSize="12"/>
-                                </label>
-                            </items>
-                        </group>
-                        <table alignment="left" spacing="3" id="lwW-m0-Em9">
-                            <items>
-                                <tableRow identifier="EventoRow" id="a1N-cw-CuI" customClass="EventosRowController" customModule="weekomp_WatchKit_Extension">
-                                    <group key="rootItem" width="1" height="0.0" alignment="left" radius="7" spacing="0.0" id="wRT-aL-kFi">
-                                        <items>
-                                            <group width="0.0" alignment="right" verticalAlignment="center" layout="vertical" radius="0.0" id="HgB-wP-WvS">
-                                                <items>
-                                                    <label width="1" alignment="left" text="Abertura WeeKomp" numberOfLines="0" id="Mbf-jh-z3z">
-                                                        <fontDescription key="font" type="system" pointSize="16"/>
-                                                    </label>
-                                                    <group width="1" alignment="left" id="JHj-t0-W3y">
-                                                        <items>
-                                                            <label alignment="right" text="18:00" id="ZtY-10-Rcb">
-                                                                <color key="textColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <fontDescription key="font" type="system" weight="medium" pointSize="12"/>
-                                                            </label>
-                                                        </items>
-                                                        <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
-                                                    </group>
-                                                </items>
-                                                <color key="backgroundColor" red="0.22227290550000001" green="0.22227290550000001" blue="0.22227290550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <edgeInsets key="margins" left="4" right="3" top="0.0" bottom="0.0"/>
-                                            </group>
-                                        </items>
-                                        <color key="backgroundColor" red="0.47058823529999999" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <edgeInsets key="margins" left="7" right="0.0" top="0.0" bottom="0.0"/>
-                                    </group>
-                                    <connections>
-                                        <outlet property="background" destination="wRT-aL-kFi" id="0dO-L3-uuL"/>
-                                        <outlet property="labelHorario" destination="ZtY-10-Rcb" id="2CV-vM-cxV"/>
-                                        <outlet property="labelNome" destination="Mbf-jh-z3z" id="j7F-L4-VTN"/>
-                                    </connections>
-                                </tableRow>
-                            </items>
-                        </table>
-                    </items>
-                    <connections>
-                        <outlet property="tableEventos" destination="lwW-m0-Em9" id="faJ-nx-1OV"/>
-                        <segue destination="MIw-iI-dhp" kind="relationship" relationship="nextPage" id="rda-cd-KDe"/>
-                    </connections>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="466.41025641025647" y="336.94871794871796"/>
-        </scene>
-        <!--WEEKOMP-->
-        <scene sceneID="5eY-r3-dRm">
-            <objects>
-                <controller title="WEEKOMP" id="MIw-iI-dhp" customClass="Talks3InterfaceController" customModule="weekomp_WatchKit_Extension">
-                    <items>
-                        <group width="1" alignment="left" id="TOt-17-Uzr">
-                            <items>
-                                <label alignment="left" text="18.10.18" id="j0o-QB-WqW">
-                                    <color key="textColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <fontDescription key="font" type="system" weight="semibold" pointSize="12"/>
-                                </label>
-                            </items>
-                        </group>
-                        <table alignment="left" spacing="3" id="nHO-XF-GeM">
-                            <items>
-                                <tableRow identifier="EventoRow" id="PVZ-YE-WRO" customClass="EventosRowController" customModule="weekomp_WatchKit_Extension">
-                                    <group key="rootItem" width="1" height="0.0" alignment="left" radius="7" spacing="0.0" id="6Sv-Se-nIV">
-                                        <items>
-                                            <group width="0.0" alignment="right" verticalAlignment="center" layout="vertical" radius="0.0" id="gik-bn-P9x">
-                                                <items>
-                                                    <label width="1" alignment="left" text="Abertura WeeKomp" numberOfLines="0" id="oYk-Td-Wes">
-                                                        <fontDescription key="font" type="system" pointSize="16"/>
-                                                    </label>
-                                                    <group width="1" alignment="left" id="lEM-0u-u9T">
-                                                        <items>
-                                                            <label alignment="right" text="18:00" id="iRK-wE-EZc">
-                                                                <color key="textColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <fontDescription key="font" type="system" weight="medium" pointSize="12"/>
-                                                            </label>
-                                                        </items>
-                                                        <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
-                                                    </group>
-                                                </items>
-                                                <color key="backgroundColor" red="0.22227290550000001" green="0.22227290550000001" blue="0.22227290550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <edgeInsets key="margins" left="4" right="3" top="0.0" bottom="0.0"/>
-                                            </group>
-                                        </items>
-                                        <color key="backgroundColor" red="0.47058823529999999" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <edgeInsets key="margins" left="7" right="0.0" top="0.0" bottom="0.0"/>
-                                    </group>
-                                    <connections>
-                                        <outlet property="background" destination="6Sv-Se-nIV" id="IzV-Ry-525"/>
-                                        <outlet property="labelHorario" destination="iRK-wE-EZc" id="AW3-hZ-dwI"/>
-                                        <outlet property="labelNome" destination="oYk-Td-Wes" id="WGW-0E-VDa"/>
-                                    </connections>
-                                </tableRow>
-                            </items>
-                        </table>
-                    </items>
-                    <connections>
-                        <outlet property="tableEventos" destination="nHO-XF-GeM" id="r2h-5y-U3O"/>
-                        <segue destination="P1t-uA-NL7" kind="relationship" relationship="nextPage" id="Qzw-5V-JtK"/>
-                    </connections>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="720" y="337"/>
-        </scene>
-        <!--WEEKOMP-->
-        <scene sceneID="dD6-1b-yPn">
-            <objects>
-                <controller title="WEEKOMP" id="P1t-uA-NL7" customClass="Talks4InterfaceController" customModule="weekomp_WatchKit_Extension">
-                    <items>
-                        <group width="1" alignment="left" id="kkZ-h3-cSB">
-                            <items>
-                                <label alignment="left" text="19.10.18" id="6lF-N2-AyL">
-                                    <color key="textColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <fontDescription key="font" type="system" weight="semibold" pointSize="12"/>
-                                </label>
-                            </items>
-                        </group>
-                        <table alignment="left" spacing="3" id="5go-n4-BGb">
-                            <items>
-                                <tableRow identifier="EventoRow" id="oRA-wm-10A" customClass="EventosRowController" customModule="weekomp_WatchKit_Extension">
-                                    <group key="rootItem" width="1" height="0.0" alignment="left" radius="7" spacing="0.0" id="9uJ-5c-ufM">
-                                        <items>
-                                            <group width="0.0" alignment="right" verticalAlignment="center" layout="vertical" radius="0.0" id="mht-pn-jzj">
-                                                <items>
-                                                    <label width="1" alignment="left" text="Abertura WeeKomp" numberOfLines="0" id="owG-Sb-VoQ">
-                                                        <fontDescription key="font" type="system" pointSize="16"/>
-                                                    </label>
-                                                    <group width="1" alignment="left" id="dqb-GY-MuG">
-                                                        <items>
-                                                            <label alignment="right" text="18:00" id="2D0-10-5OX">
-                                                                <color key="textColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <fontDescription key="font" type="system" weight="medium" pointSize="12"/>
-                                                            </label>
-                                                        </items>
-                                                        <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
-                                                    </group>
-                                                </items>
-                                                <color key="backgroundColor" red="0.22227290550000001" green="0.22227290550000001" blue="0.22227290550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <edgeInsets key="margins" left="4" right="3" top="0.0" bottom="0.0"/>
-                                            </group>
-                                        </items>
-                                        <color key="backgroundColor" red="0.47058823529999999" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <edgeInsets key="margins" left="7" right="0.0" top="0.0" bottom="0.0"/>
-                                    </group>
-                                    <connections>
-                                        <outlet property="background" destination="9uJ-5c-ufM" id="P9x-ON-0fw"/>
-                                        <outlet property="labelHorario" destination="2D0-10-5OX" id="7MR-bk-Cmd"/>
-                                        <outlet property="labelNome" destination="owG-Sb-VoQ" id="34n-Ft-scA"/>
-                                    </connections>
-                                </tableRow>
-                            </items>
-                        </table>
-                    </items>
-                    <connections>
-                        <outlet property="tableEventos" destination="5go-n4-BGb" id="eL2-4t-1ko"/>
-                    </connections>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="971" y="337"/>
         </scene>
         <!--Details-->
         <scene sceneID="cP9-8M-Zb2">
@@ -288,7 +117,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="66"/>
+            <point key="canvasLocation" x="452" y="337"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">

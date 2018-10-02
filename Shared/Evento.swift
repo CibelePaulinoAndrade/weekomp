@@ -32,12 +32,7 @@ class Evento: Codable {
         }
         
         return eventos
-//        return eventos.sorted(by: { (evento1, evento2) -> Bool in
-//            let dayEvento1 = evento1.dia.split(separator: ".")[0]
-//            let dayEvento1 = evento1.dia.split(separator: ".")[0]
-//
-//
-//        })
+
         
     }
     
