@@ -9,9 +9,11 @@
 import UIKit
 import UserNotifications
 
+
 class ViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
+    
     var allEvents: [Evento] = []
     var firtDayEvents: [Evento] = []
     var secondDayEvents: [Evento] = []
@@ -21,21 +23,33 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.delegate = self
         tableView.dataSource = self
-        UNUserNotificationCenter.current().delegate = self
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler: {didAllow, error in
+    
+        
+        UserDefaults.standard.removePersistentDomain(forName: "Favorites")
+        //pedindo autorizacao para notificar
+        let centerNotification = UNUserNotificationCenter.current()
+        centerNotification.delegate = self
+        centerNotification.requestAuthorization(options: [.alert, .sound, .badge], completionHandler: {didAllow, error in
             
         })
         
+        // carregando informacao
+        loadInfo()
+
+    }
+    
+    func loadInfo(){
         allEvents = Evento.allEventos()
         firtDayEvents = Evento.eventsOf(day: "16")
         secondDayEvents = Evento.eventsOf(day: "17")
         thirdDayEvents = Evento.eventsOf(day: "18")
         fourthEvents = Evento.eventsOf(day: "19")
-
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -130,7 +144,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         default:
             return cell
         }
-       
+        let bgColorView = UIView()
+        bgColorView.backgroundColor = UIColor.gray
+        cell.selectedBackgroundView = bgColorView
         return cell
     }
     
@@ -152,3 +168,5 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
 }
+
+

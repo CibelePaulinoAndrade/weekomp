@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14113" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14109" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch42" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="watchOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14033"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14031"/>
     </dependencies>
     <scenes>
         <!--WEEKOMP-->
@@ -94,14 +94,15 @@
                                     </items>
                                     <edgeInsets key="margins" left="0.0" right="0.0" top="8" bottom="8"/>
                                 </group>
-                                <group width="1" alignment="center" verticalAlignment="center" radius="2" id="Yja-Xg-hkK">
+                                <group width="1" alignment="center" verticalAlignment="center" radius="2" spacing="9" id="Yja-Xg-hkK">
                                     <items>
-                                        <button width="20" height="20" alignment="center" verticalAlignment="center" backgroundImage="star-5" id="hx7-Q1-q49">
+                                        <button width="20" height="20" alignment="left" verticalAlignment="center" backgroundImage="star-5" id="hx7-Q1-q49">
                                             <fontDescription key="font" type="system" pointSize="10"/>
                                             <connections>
                                                 <action selector="favoriteButtonAction" destination="iBf-Iz-ilU" id="4qQ-3p-ZQh"/>
                                             </connections>
                                         </button>
+                                        <label alignment="left" verticalAlignment="center" text="Favoritar" id="6CQ-6p-2Ok"/>
                                     </items>
                                     <gestureRecognizers>
                                         <tapGestureRecognizer id="dj5-tk-grS">
@@ -111,7 +112,7 @@
                                         </tapGestureRecognizer>
                                     </gestureRecognizers>
                                     <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <edgeInsets key="margins" left="0.0" right="0.0" top="4" bottom="4"/>
+                                    <edgeInsets key="margins" left="9" right="0.0" top="4" bottom="4"/>
                                 </group>
                             </items>
                             <edgeInsets key="margins" left="8" right="8" top="0.0" bottom="8"/>
@@ -122,6 +123,7 @@
                         <outlet property="eventoDescriptionGroup" destination="EHH-7P-GXS" id="Tia-Pl-JH9"/>
                         <outlet property="favoriteButton" destination="hx7-Q1-q49" id="x7R-bh-F2h"/>
                         <outlet property="favoriteButtonGroup" destination="Yja-Xg-hkK" id="y0R-A4-NWz"/>
+                        <outlet property="favoriteLabel" destination="6CQ-6p-2Ok" id="M6W-PM-4C0"/>
                         <outlet property="local" destination="RZ8-64-CtS" id="ToT-Xd-llN"/>
                         <outlet property="palestrante" destination="Yea-Jy-12n" id="ecx-ZP-43j"/>
                         <outlet property="titulo" destination="lff-gc-cSX" id="9qc-2H-HQN"/>

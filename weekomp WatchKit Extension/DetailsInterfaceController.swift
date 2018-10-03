@@ -8,6 +8,7 @@
 
 import WatchKit
 import Foundation
+import WatchConnectivity
 
 
 class DetailsInterfaceController: WKInterfaceController {
@@ -18,6 +19,7 @@ class DetailsInterfaceController: WKInterfaceController {
     @IBOutlet var eventoDescriptionGroup: WKInterfaceGroup!
     @IBOutlet var favoriteButtonGroup: WKInterfaceGroup!
     @IBOutlet var favoriteButton: WKInterfaceButton!
+    @IBOutlet var favoriteLabel: WKInterfaceLabel!
     
     var evento: Evento?
     var isFavorite = true
@@ -35,9 +37,18 @@ class DetailsInterfaceController: WKInterfaceController {
         self.setValores(evento!)
         self.favoriteButtonGroup.setBackgroundColor(evento?.getColor())
         
+ 
         self.addMenuItem(with: #imageLiteral(resourceName: "star-5"), title: "Desfavoritar", action: #selector(menuItemAction))
         self.favoriteButton.setBackgroundImage(#imageLiteral(resourceName: "star-3"))
-        
+        favoriteLabel.setText("Desfavoritar")
+    }
+    
+    override func willActivate() {
+        if WCSession.isSupported() {
+            let session = WCSession.default
+            session.delegate = self
+            session.activate()
+        }
     }
 
     override func willDisappear() {
@@ -73,38 +84,66 @@ class DetailsInterfaceController: WKInterfaceController {
     }
     
     private func handleFavorite() {
-        isFavorite = !isFavorite
-        clearAllMenuItems()
+        
         if isFavorite {
             self.favoriteButton.setBackgroundImage(#imageLiteral(resourceName: "star-3"))
+            addMenuItem(with: #imageLiteral(resourceName: "star-5"), title: "Favoritar", action: #selector(menuItemAction))
+            favoriteLabel.setText("Favoritar")
+            guard let nameTalk = evento?.nome else {return}
+            ManagerFavorite.removing(favoriteName: nameTalk)
+            sendMessage(message: nameTalk, isSaving: false)
+            isFavorite = false
+        }else{
+            self.favoriteButton.setBackgroundImage(#imageLiteral(resourceName: "star-3"))
             addMenuItem(with: #imageLiteral(resourceName: "star-5"), title: "Desfavoritar", action: #selector(menuItemAction))
-        } else {
-            self.favoriteButton.setBackgroundImage(#imageLiteral(resourceName: "star-5"))
-            addMenuItem(with: #imageLiteral(resourceName: "star-3"), title: "Favoritar", action: #selector(menuItemAction))
+            favoriteLabel.setText("Desfavoritar")
+            guard let nameTalk = evento?.nome else {return}
+            ManagerFavorite.saving(favoriteName: nameTalk)
+            sendMessage(message: nameTalk, isSaving: true)
+            isFavorite = true
+            
         }
         
-        self.favoriteUserDefaults()
+        
+//        isFavorite = !isFavorite
+//        clearAllMenuItems()
+//        if isFavorite {
+//            self.favoriteButton.setBackgroundImage(#imageLiteral(resourceName: "star-3"))
+//            addMenuItem(with: #imageLiteral(resourceName: "star-5"), title: "Desfavoritar", action: #selector(menuItemAction))
+//            favoriteLabel.setText("Desfavoritar")
+//        } else {
+//            self.favoriteButton.setBackgroundImage(#imageLiteral(resourceName: "star-5"))
+//            addMenuItem(with: #imageLiteral(resourceName: "star-3"), title: "Favoritar", action: #selector(menuItemAction))
+//            favoriteLabel.setText("Favoritar")
+//
+//        }
+//
+//        //self.favoriteUserDefaults()
     }
     
-    private func favoriteUserDefaults() {
-        let favorites = UserDefaults.standard.array(forKey: "Favorites") as? [String]
-        var fav = favorites
-        let eventoNome = (evento?.nome)!
-        
-        if favorites != nil {
-            if !(favorites?.contains(eventoNome))! {
-                fav?.append(eventoNome)
-            } else {
-                let removedIndex = fav?.index(of: eventoNome)
-                fav?.remove(at: removedIndex!)
-            }
-        } else {
-            fav = []
-            fav?.append(eventoNome)
-        }
-        
-        UserDefaults.standard.set(fav!, forKey: "Favorites")
-        
-    }
     
 }
+
+func sendMessage(message: String, isSaving: Bool){
+    if WCSession.default.isReachable {
+        var dict: [String: Any] = ["isSaving": isSaving]
+        dict["nameTalk"] = message
+        WCSession.default.sendMessage(dict, replyHandler: nil, errorHandler: nil)
+    }
+}
+
+extension DetailsInterfaceController: WCSessionDelegate{
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        
+    }
+    
+    
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+        
+    }
+    
+    
+}
+
+

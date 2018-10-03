@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WatchConnectivity
 
 class DetailsViewController: UIViewController {
 
@@ -19,11 +20,24 @@ class DetailsViewController: UIViewController {
     @IBOutlet var details: UITextView!
     @IBOutlet var buttonFavorite: UIButton!
     
-    var isFavorite = true
+    var isFavoriteButton = true
     var talk: Evento?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setLayout()git 
+        
+        // checking if this talk is a favorite
+        guard let nomeTalk = talk?.nome else {return}
+        if ManagerFavorite.isFavorite(name: nomeTalk){
+            buttonFavorite.setTitle("Desfavoritar", for: .normal)
+        }
+        isFavoriteButton = ManagerFavorite.isFavorite(name: nomeTalk)
+    }
+    
+    
+    
+    func setLayout(){
         guard let colorTag = talk?.getColor() else {return}
         titleTalk.text = talk?.nome
         tag.text = talk?.sessao
@@ -34,58 +48,53 @@ class DetailsViewController: UIViewController {
         buttonFavorite.backgroundColor = colorTag
         buttonFavorite.layer.cornerRadius = 10
         buttonFavorite.clipsToBounds = true
-
-        // Do any additional setup after loading the view.
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    
+    func sendMessage(message: String, isSaving: Bool){
+        if WCSession.default.isReachable {
+            var dict: [String: Any] = ["isSaving": isSaving]
+            dict["nameTalk"] = message
+            WCSession.default.sendMessage(dict, replyHandler: nil, errorHandler: nil)
+        }
     }
     
     @IBAction func favorite(_ sender: Any) {
-        if isFavorite {
+        guard let nomeTalk = talk?.nome else {return}
+        if !isFavoriteButton {
             buttonFavorite.setTitle("Desfavoritar", for: .normal)
-            favoriteUserDefaults()
-            isFavorite = false
+            //saving in userDefaults
+            ManagerFavorite.saving(favoriteName: nomeTalk)
+            //sending message to watch
+            sendMessage(message: nomeTalk, isSaving: true)
+            isFavoriteButton = true
         }else{
             buttonFavorite.setTitle("Favoritar", for: .normal)
-            favoriteUserDefaults()
-            
+            //removing from userDefaults
+            ManagerFavorite.removing(favoriteName: nomeTalk)
+            //sending message to watch
+            sendMessage(message: nomeTalk, isSaving: false)
+            isFavoriteButton = false
         }
-       
-        
-        
     }
-    
-    private func favoriteUserDefaults() {
-        var favorites = UserDefaults.standard.array(forKey: "Favorites") as? [String]
-        let eventoNome = (talk?.nome)!
-        
-        if favorites != nil {
-            if !(favorites?.contains(eventoNome))! {
-                favorites?.append(eventoNome)
-            } else {
-                let removedIndex = favorites?.index(of: eventoNome)
-                favorites?.remove(at: removedIndex!)
-            }
-        } else {
-            favorites = []
-            favorites?.append(eventoNome)
-        }
-        
-        UserDefaults.standard.set(favorites!, forKey: "Favorites")
-        
-    }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+      
 
 }
+
+extension DetailsViewController: WCSessionDelegate{
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        
+    }
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+        
+    }
+    
+    
+}
+
