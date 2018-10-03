@@ -25,7 +25,7 @@ class DetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setLayout()git 
+        setLayout()
         
         // checking if this talk is a favorite
         guard let nomeTalk = talk?.nome else {return}
